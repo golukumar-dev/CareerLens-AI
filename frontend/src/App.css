@@ -1,0 +1,383 @@
+
+/* Puri website ke default spacing aur font settings */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+/* Website ka main wrapper */
+.app {
+  min-height: 100vh;
+}
+
+/* Top navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 7%;
+  background: #ffffff;
+  border-bottom: 1px solid #e4e8f0;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #5146d8;
+}
+
+.navbar span {
+  color: #68738a;
+  font-size: 14px;
+}
+
+/* Main content ko center mein rakhta hai */
+.container {
+  width: min(100% - 32px, 1000px);
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+/* Page ka introduction section */
+.hero {
+  padding: 28px 0;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #5146d8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 12px 0;
+  font-size: clamp(30px, 5vw, 46px);
+}
+
+.hero > p:last-child {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #68738a;
+  line-height: 1.7;
+}
+
+/* Form aur result sections ke cards */
+.card {
+  margin: 22px 0;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e5e9f2;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(27, 39, 70, 0.04);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 21px;
+}
+
+.card p {
+  color: #68738a;
+  line-height: 1.6;
+}
+
+/* File upload aur job description fields */
+input[type="file"] {
+  display: block;
+  width: 100%;
+  margin: 18px 0;
+  padding: 14px;
+  background: #f8f9fd;
+  border: 1px dashed #b8bfd1;
+  border-radius: 9px;
+}
+
+.selected-file {
+  overflow-wrap: anywhere;
+}
+
+.form-heading {
+  margin-top: 30px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 180px;
+  margin: 16px 0;
+  padding: 15px;
+  resize: vertical;
+  border: 1px solid #d5dbea;
+  border-radius: 10px;
+  font: inherit;
+  line-height: 1.6;
+}
+
+textarea:focus,
+input:focus {
+  outline: 2px solid #bcb6ff;
+  outline-offset: 2px;
+}
+
+/* Resume analysis button */
+.analyze-btn {
+  width: 100%;
+  padding: 15px;
+  background: #5146d8;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.analyze-btn:hover {
+  background: #4035bd;
+}
+
+.analyze-btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* Error message styling */
+.error-message {
+  margin-bottom: 0;
+  color: #c62828 !important;
+}
+
+/* Analysis result heading */
+.results-section {
+  margin-top: 38px;
+}
+
+.results-heading {
+  margin: 30px 0 22px;
+}
+
+.results-heading h2 {
+  margin: 8px 0;
+  font-size: 28px;
+}
+
+/* Score cards ka responsive grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e9f2;
+  border-radius: 14px;
+}
+
+.stat-card p {
+  margin: 0;
+  color: #68738a;
+}
+
+.stat-card h3 {
+  margin: 12px 0;
+  color: #5146d8;
+  font-size: 34px;
+}
+
+.stat-card span {
+  color: #7a8498;
+  font-size: 12px;
+}
+
+/* Matched aur missing skills ke tags */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 9px 13px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.skill-tag.matched {
+  background: #1cbb59;
+  color: #c1d1c7;
+}
+
+.skill-tag.missing {
+  background: #8e553b;
+  color: #e3ede9;
+}
+
+/* Resume section checklist */
+.checklist {
+  display: grid;
+  gap: 12px;
+}
+
+.checklist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.status-present {
+  color: #129247;
+  font-weight: 700;
+}
+
+.status-missing {
+  color: #a84618;
+  font-weight: 700;
+}
+
+/* Improvement suggestions ki list */
+.suggestion-list {
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.suggestion-list li {
+  margin: 10px 0;
+}
+
+/* Extra explanation aur extracted text */
+.note {
+  color: #68738a;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.extracted-section summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.extracted-section pre {
+  margin-top: 18px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Website ka footer */
+footer {
+  padding: 24px 16px;
+  text-align: center;
+  color: #68738a;
+  background: #ffffff;
+  border-top: 1px solid #e5e9f2;
+  font-size: 13px;
+}
+
+/* Mobile screen par layout adjust karta hai */
+@media (max-width: 600px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .container {
+    width: min(100% - 22px, 1000px);
+    padding-top: 16px;
+  }
+
+  .card {
+    padding: 19px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .card h2 {
+  color: #060709 !important;
+}
+}
+
+
+/* Job role search */
+.card input[type="text"],
+.card select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* Recommended job roles */
+.recommendation-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.recommendation-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px;
+  background: #ffffff;
+}
+
+.recommendation-card h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.recommendation-card p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.recommendation-card button {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.recommendation-card button:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .recommendation-list {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+    padding: 15px;
+  }
+}
